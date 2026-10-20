@@ -1,28 +1,16 @@
-# CodeAlpha_TaskAutomation
+# CodeAlpha Python Programming Internship — Task 3: Task Automation with Python Scripts
 
-**CodeAlpha Python Programming Internship — Task 3: Task Automation with Python Scripts**
+A menu-driven Python script that automates two repetitive tasks using only Python standard library modules. No additional packages or internet connection are required.
 
-A menu-driven script that automates two small, real-life repetitive tasks.
-Only Python standard library modules are used — nothing to install, and no
-internet connection is needed.
-
----
-
-## Task Requirements (from CodeAlpha)
-
-The task asks you to pick one automation idea. This project implements **two**
-of the listed ideas:
+## Task Requirements
 
 | Automation | Status |
 |---|---|
-| Move all .jpg files from a folder to a new folder | Done |
-| Extract all email addresses from a .txt file and save them | Done |
-| Key concepts: `os`, `shutil`, `re`, file handling | Done |
+| Move `.jpg` and `.jpeg` files from one folder to another | Done |
+| Extract email addresses from a `.txt` file and save them | Done |
+| Key concepts: `os`, `shutil`, `re`, file handling | Covered |
 
-The third idea (web scraping) was skipped deliberately, since it needs the
-`requests` library and an internet connection.
-
----
+Web scraping was skipped because it requires additional setup and an internet connection.
 
 ## How to Run
 
@@ -30,38 +18,32 @@ The third idea (web scraping) was skipped deliberately, since it needs the
 python automation.py
 ```
 
-On macOS/Linux use `python3 automation.py`. Then choose option 1, 2 or 3 from
-the menu.
+On macOS/Linux, use:
 
----
+```bash
+python3 automation.py
+```
+
+Then choose option 1, 2, or 3 from the menu.
 
 ## Automation 1 — Move JPG Images
 
-Enter a source folder and a destination folder. Every `.jpg` and `.jpeg` file
-is moved across, and the destination folder is created automatically if it
-doesn't exist. Invalid folder paths are rejected instead of crashing.
+Enter a source folder and a destination folder. The script moves `.jpg` and `.jpeg` files and creates the destination folder if it does not exist.
 
-**Warning:** this *moves* files, it does not copy them. Test it on a folder of
-sample images first, not on your only copy of something important.
+**Warning:** This operation moves files rather than copying them. Test with sample images first.
 
 ## Automation 2 — Extract Email Addresses
 
-Enter the path of a `.txt` file. The script uses a regular expression to find
-every email address inside it, removes duplicates, prints them, and writes
-them to an output file (one per line).
+Enter the path of a `.txt` file. The script uses a regular expression to find email addresses, removes duplicates, displays the results, and writes the unique addresses to an output file, one per line.
 
-A ready-made test file, `sample_emails.txt`, is included. Try:
+A sample file, `sample_emails.txt`, is included.
 
-```
+Example:
+
+```text
 Enter the path of the .txt file to read: sample_emails.txt
 Enter the name of the output file (e.g. emails.txt): emails.txt
 ```
-
-It contains 7 email addresses, one of which is a duplicate — so the script
-reports 7 found and 6 unique. It also contains near-misses like `www.codealpha.tech`
-and `user at domain dot com` that are correctly ignored.
-
----
 
 ## The Regex Explained
 
@@ -71,25 +53,21 @@ r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
 
 | Part | Meaning |
 |---|---|
-| `[a-zA-Z0-9._%+-]+` | one or more valid characters before the `@` |
-| `@` | the literal `@` symbol |
-| `[a-zA-Z0-9.-]+` | the domain name, e.g. `gmail` |
-| `\.` | a literal dot |
-| `[a-zA-Z]{2,}` | the extension (2 or more letters), e.g. `com`, `in` |
-
----
+| `[a-zA-Z0-9._%+-]+` | Characters allowed before `@` |
+| `@` | The literal `@` symbol |
+| `[a-zA-Z0-9.-]+` | Domain name |
+| `\.` | A literal dot |
+| `[a-zA-Z]{2,}` | Domain extension of two or more letters |
 
 ## Project Structure
 
-```
+```text
 CodeAlpha_TaskAutomation/
 ├── automation.py
-├── sample_emails.txt    # test data for automation 2
+├── sample_emails.txt
 ├── README.md
 └── .gitignore
 ```
-
----
 
 ## Author
 
