@@ -1,0 +1,20 @@
+Meeting Notes - Project Kickoff
+--------------------------------
+
+Attendees and contacts:
+
+Priya Sharma can be reached at priya.sharma@example.com for scheduling.
+The technical lead is rahul_verma99@techmail.co.in - please copy him on all
+deployment updates.
+
+For billing questions write to accounts@codealpha.tech or the backup address
+services.codealpha@gmail.com.
+
+Note: priya.sharma@example.com was also listed in the old document, so you may
+see this address twice.
+
+Random text that is not an email: www.codealpha.tech, @codealpha, 100%, user at
+domain dot com.
+
+Vendor support: support@vendorhub.org
+Intern coordinator: coordinator.intern@university.edu
